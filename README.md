@@ -4,14 +4,13 @@ Build of [HCL v2](https://github.com/hashicorp/hcl/tree/hcl2) because you can't 
 
 ## Install
 
-```bash
-export INSTALL_PATH="/tmp/hclfmt" \
-  && wget -qqO hclfmt.gz https://github.com/teamon/hclfmt/releases/download/v0.0.1/hclfmt_0.0.1_Linux_x86_64.gz \
-  && (echo "c428abda0cdf4810fed297a44a05cb24bb166e6a21f5a5f505b930d70faa8ddc  hclfmt.gz" | sha256sum -c) \
-  && gzip -cd < hclfmt.gz > "${INSTALL_PATH}" \
-  && chmod +x "${INSTALL_PATH}" \
-  && rm hclfmt.gz
+You most probably want to try the official way:
+
 ```
+GO111MODULE=on go get github.com/hashicorp/hcl/v2/cmd/hclfmt
+```
+
+but if for some reason this does not work for you grab a binary from [releases](https://github.com/teamon/hclfmt/releases).
 
 ## Build
 
